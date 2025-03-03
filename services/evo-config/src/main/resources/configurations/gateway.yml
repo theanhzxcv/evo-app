@@ -1,0 +1,65 @@
+server:
+  port: 8222
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "*"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: false
+      routes:
+        - id: iam-service
+          uri: lb://iam-service
+          predicates:
+            - Path=/api/**, /v3/api-docs/iam
+
+        - id: storage-service
+          uri: lb://storage-service
+          predicates:
+            - Path=/api/**, /v3/api-docs/storage
+
+      default-filters: DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - name: API Gateway
+        url: /v3/api-docs
+      - name: IAM Service
+        url: /v3/api-docs/iam
+      - name: Storage Service
+        url: /v3/api-docs/storage
+
+management:
+  health:
+    circuitbreaker:
+      enable: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enable: true
+      show-details: always
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
