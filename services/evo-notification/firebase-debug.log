@@ -1,0 +1,28 @@
+[debug] [2025-03-06T07:14:37.428Z] ----------------------------------------------------------------------
+[debug] [2025-03-06T07:14:37.434Z] Command:       /Users/theanh/.nvm/versions/node/v20.11.0/bin/node /Users/theanh/.nvm/versions/node/v20.11.0/bin/firebase init
+[debug] [2025-03-06T07:14:37.434Z] CLI Version:   13.32.0
+[debug] [2025-03-06T07:14:37.434Z] Platform:      darwin
+[debug] [2025-03-06T07:14:37.434Z] Node Version:  v20.11.0
+[debug] [2025-03-06T07:14:37.434Z] Time:          Thu Mar 06 2025 14:14:37 GMT+0700 (Indochina Time)
+[debug] [2025-03-06T07:14:37.434Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-06T07:14:37.436Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-06T07:14:37.437Z] > authorizing via signed-in user (theanhhhh7@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/theanh/IdeaProject/evo-app/services/evo-notification
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

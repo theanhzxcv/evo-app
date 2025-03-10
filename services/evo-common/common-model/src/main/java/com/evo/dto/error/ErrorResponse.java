@@ -1,6 +1,6 @@
 package com.evo.dtos.error;
 
-import com.evo.dtos.responses.Response;
+import com.evo.dtos.responses.ApiResponse;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 
@@ -9,7 +9,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ErrorResponse<T> extends Response<T> {
+public class ErrorResponse<T> extends ApiResponse<T> {
     private String error;
 
     @Builder
